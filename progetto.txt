@@ -1,0 +1,43 @@
+PROGETTO STAGE 2026 - GABRIELE LA VISTA
+
+OBIETTIVO
+Effettuare un refactoring per rendere operativo e fruibile il software per la 
+gestione della presenza in ufficio.
+
+
+ELEMENTI TECNICI
+- VueJs: Framework frontend Javascript
+- NodeJS: Motore di ricerca per un backend Javascript
+- https://git.gnet.it: Gestione dei sorgenti
+- Salesforce: Database CRM
+- sfdc2.js: Libreria per la connessione a Salesforce
+
+DESCRIZIONE
+Per questioni organizzative l'azienda chiede ai dipendenti di indicare se 
+lavoreranno da remoto o in ufficio, attualmente utilizzando un Google Sheet.
+
+Essendo che questa gestione è molto basica, è stato deciso di creare un 
+software web che permetta in modo facile e veloce la gestione e, 
+successivamente, l'automazione dello stesso.
+
+È stato quindi creato un prototipo in "vibe coding" per immaginare la 
+soluzione definitiva; ora si tratta di convertirlo in un software vero e 
+proprio.
+
+L'obiettivo è di razionalizzare il software e di sostituire l'attuale 
+database locale (SQLite) con un vero database, in questo caso Salesforce, 
+presente in Cloud.
+
+
+FASI DI PROGETTO
+1. Recuperare dal repository git fornito il progetto attuale.
+2. Consolidare le due cartelle, frontend e backend, in un'unica cartella di 
+   progetto che contiene la sottocartella del backend, per rendere più comoda 
+   la gestione.
+3. Verificare tutto il codice e rendere l'interfaccia fruibile anche da 
+   mobile e il più possibile semplice.
+4. Disegnare il diagramma dell'attuale database e implementarlo su Salesforce 
+   (chiedere aiuto).
+5. Rimpiazzare le chiamate a SQLite con quelle presenti nella libreria 
+   sfdc2.js (chiedere aiuto).
+6. (Opzionale) Integrare Google login.
