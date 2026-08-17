@@ -1,0 +1,154 @@
+:root {
+  --primary-color: linear-gradient(135deg, #818cf8, #4f46e5);
+  --primary-hover: linear-gradient(135deg, #818cf8, #4f46e5); 
+  --bg-color: #f8fafc;
+  --card-bg: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0; 
+  --success: #10b981;
+  --warning: #f59e0b;
+  --info: #0ea5e9;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(0, 0, 0, 0.05);
+
+  --vacation-text: rgba(0, 34, 255, 0.745);
+  --sick-text: rgba(185, 3, 3, 0.745);
+  --holiday-text: rgba(120, 19, 136, 0.745);
+  --office-text: rgba(11, 123, 0.745);
+  --remote-text: rgba(184, 120, 10, 0.745);
+
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --border-radius: 8px;
+  --transition: all 0.2s ease-in-out;
+}
+
+.dark-mode{
+  color-scheme: dark;
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --success: #10b981;
+  --warning: #f59e0b; 
+  --info: #3b82f6;
+  --glass-bg: #1e293bb3;
+  --glass-border: #ffffff1a;
+  --toastify-color-light: #1e293b;
+
+  --vacation-text: rgba(211, 216, 248, 0.745);
+  --sick-text: rgba(238, 105, 105, 0.745);
+  --holiday-text: rgba(206, 141, 216, 0.745);
+
+
+  --toastify-text-color-light: white; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#app {
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+select {
+  cursor: pointer;
+  font-family: inherit;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-main);
+  padding: 0.5rem 1rem;
+  transition: var(--transition);
+}
+
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.2);
+}
+
+.glass-panel {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-office,
+.status-badge[class*="office"] {
+  background-color: rgba(16, 185, 129, 0.15);
+  color: var(--office-text);
+}
+
+.status-badge[class*="remote"] {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: var(--remote-text);
+}
+
+.status-badge[class*="sick"] {
+  background-color: rgba(243, 18, 18, 0.15);
+  color: var(--sick-text);
+}
+
+.status-badge[class*="vacation"] {
+  background-color: rgba(18, 134, 243, 0.15);
+  color: var(--vacation-text);
+}
+
+.status-badge[class*="other"] {
+  background-color: rgba(139, 142, 144, 0.15);
+}
+
+.status-badge[class*="holiday"] {
+  background-color: rgba(243, 18, 224, 0.15);
+  color: var(--holiday-text);
+}
+
+.status-none {
+  background-color: transparent;
+  color: var(--text-main);
+}
